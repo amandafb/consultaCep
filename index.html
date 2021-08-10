@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container cep">
+            <div class="pesquisa">
+                <h1 class="text-white">Consulta CEP</h1>
+                <div class="d-flex">
+                    <input id="cep" class="form-control me-2" type="search" placeholder="CEP (00000-000)" required min="8" max="9">
+                    <button class="btn btn-outline-light" id="btnBusca">Buscar</button>
+                </div>
+            </div>
+            <div class="row">
+                <span class="erro text-center">Erro</span>
+                <h3>CEP <span id="cepConsultado"></span></h3>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Logradouro</strong></td>
+                            <td id="logradouro"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bairro</strong></td>
+                            <td id="bairro"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Localidade</strong></td>
+                            <td id="localidade"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>UF</strong></td>
+                            <td id="uf"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="info">
+            <span>Busca realizada utilizando a API ViaCEP</span>
+            <span>Desenvolvido por Amanda Borim</span> 
+        </div>
+        
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
